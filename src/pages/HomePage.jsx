@@ -18,6 +18,8 @@ import teamMember2 from '../assets/team-member-2.jpg';
 import teamMember3 from '../assets/team-member-3.jpg';
 import teamMember4 from '../assets/team-member-4.jpg';
 import './Homepage.css';
+import { Link } from 'react-router-dom';
+
 
 // Note: You'll need to install:
 // npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
@@ -133,7 +135,7 @@ const Homepage = () => {
               </li>
               <li className="menu-item"><a href="#team">Our Team</a></li>
               <li className="menu-item"><a href="#events">Events</a></li>
-              <li className="menu-item"><a href="#projects">Projects</a></li>
+              <li className="menu-item"><Link to="/projects">Projects</Link></li>
               <li className="menu-item"><a href="#blogs">Blogs</a></li>
               <li className="menu-item"><a href="#she">SHE</a></li>
               <li className="menu-item"><a href="#socialinitiatives">Social Initiatives</a></li>
