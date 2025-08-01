@@ -1,7 +1,7 @@
 // src/components/Header.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import placeholderLogo from '../assets/placeholder-logo.png'; // Make sure you have a logo in assets
+import placeholderLogo from '../assets/placeholder-logo.png'; // Ensure this path is correct
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,57 +13,52 @@ function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Optional: Add scroll effect
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header className={isScrolled ? 'header-scrolled' : ''}>
       <div className="container">
         <nav className="navbar">
-          <a href="#" className="logo">
+          <Link to="/" className="logo">
             <img src={placeholderLogo} alt="ISTE NITK Logo" />
             <div className="logo-text">
               ISTE NITK
               <span>Indian Society for Technical Education</span>
             </div>
-          </a>
+          </Link>
 
           <ul className={`menu ${isMobileMenuOpen ? 'active' : ''}`}>
-            <li className="menu-item"><a href="#">Home</a></li>
-            <li className="menu-item"><a href="#about">About</a></li>
+            <li className="menu-item"><Link to="/">Home</Link></li>
+            <li className="menu-item"><Link to="/about">About</Link></li>
+
             <li className="menu-item dropdown">
-              <a href="#sigs">SIGs</a>
+              <Link to="/sigs">SIGs</Link>
               <ul className="dropdown-menu">
-                <li><a href="#charge">Charge</a></li>
-                <li><a href="#crypt">Crypt</a></li>
-                <li><a href="#create">Create</a></li>
-                <li><a href="#chronicle">Chronicle</a></li>
-                <li><a href="#catalyst">Catalyst</a></li>
-                <li><a href="#credit">Credit</a></li>
-                <li><a href="#clutch">Clutch</a></li>
-                <li><a href="#concrete">Concrete</a></li>
+                <li><Link to="/sigs/charge">Charge</Link></li>
+                <li><Link to="/sigs/crypt">Crypt</Link></li>
+                <li><Link to="/sigs/create">Create</Link></li>
+                <li><Link to="/sigs/chronicle">Chronicle</Link></li>
+                <li><Link to="/sigs/catalyst">Catalyst</Link></li>
+                <li><Link to="/sigs/credit">Credit</Link></li>
+                <li><Link to="/sigs/clutch">Clutch</Link></li>
+                <li><Link to="/sigs/concrete">Concrete</Link></li>
               </ul>
             </li>
-            <li className="menu-item"><a href="#team">Our Team</a></li>
-            <li className="menu-item"><a href="#events">Events</a></li>
+
+            <li className="menu-item"><Link to="/team">Our Team</Link></li>
+            <li className="menu-item"><Link to="/events">Events</Link></li>
             <li className="menu-item"><Link to="/projects">Projects</Link></li>
-            <li className="menu-item"><a href="#blogs">Blogs</a></li>
-            <li className="menu-item"><a href="#she">SHE</a></li>
-            <li className="menu-item"><a href="#socialinitiatives">Social Initiatives</a></li>
-            <li className="menu-item"><a href="#gallery">Gallery</a></li>
+            <li className="menu-item"><Link to="/blogs">Blogs</Link></li>
+            <li className="menu-item"><Link to="/she">SHE</Link></li>
+            <li className="menu-item"><Link to="/socialinitiatives">Social Initiatives</Link></li>
+            <li className="menu-item"><Link to="/gallery">Gallery</Link></li>
           </ul>
 
           <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
