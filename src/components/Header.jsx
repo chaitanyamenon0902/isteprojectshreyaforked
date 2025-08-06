@@ -36,10 +36,10 @@ function Header() {
 
           <ul className={`menu ${isMobileMenuOpen ? 'active' : ''}`}>
             <li className="menu-item"><Link to="/">Home</Link></li>
-            <li className="menu-item"><Link to="/about">About</Link></li>
+            <li className="menu-item"><Link to="/#about">About</Link></li>
 
             <li className="menu-item dropdown">
-              <Link to="/sigs">SIGs</Link>
+              <Link to="/#sigs">SIGs</Link>
               <ul className="dropdown-menu">
                 <li><Link to="/sigs/charge">Charge</Link></li>
                 <li><Link to="/sigs/crypt">Crypt</Link></li>
@@ -52,11 +52,13 @@ function Header() {
               </ul>
             </li>
 
-            <li className="menu-item"><Link to="/team">Our Team</Link></li>
+            <li className="menu-item"><Link to="/meettheteam">Our Team</Link></li>
             <li className="menu-item"><Link to="/events">Events</Link></li>
             <li className="menu-item"><Link to="/projects">Projects</Link></li>
-            <li className="menu-item"><Link to="/blogs">Blogs</Link></li>
             <li className="menu-item"><Link to="/she">SHE</Link></li>
+            <li className="menu-item">
+  <a href="https://istenitk.wordpress.com/" target="_blank" rel="noopener noreferrer">Blogs</a>
+</li>
             <li className="menu-item"><Link to="/socialinitiatives">Social Initiatives</Link></li>
             <li className="menu-item"><Link to="/gallery">Gallery</Link></li>
           </ul>

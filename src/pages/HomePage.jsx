@@ -357,11 +357,14 @@ const Homepage = () => {
                   <li><a href="#concrete">Concrete</a></li>
                 </ul>
               </li>
-              <li className="menu-item"><a href="#team">Our Team</a></li>
+              <li className="menu-item"><Link to ="/meettheteam">Our Team</Link></li>
               <li className="menu-item"><a href="#events">Events</a></li>
               <li className="menu-item"><Link to="/projects">Projects</Link></li>
-              <li className="menu-item"><a href="#she">SHE</a></li>
-              <li className="menu-item"><a href="#socialinitiatives">Social Initiatives</a></li>
+              <li className="menu-item"><Link to="/she">SHE</Link></li>
+              <li className="menu-item">
+  <a href="https://istenitk.wordpress.com/" target="_blank" rel="noopener noreferrer">Blogs</a>
+</li>
+              <li className="menu-item"><Link to ="/socialinitiatives">Social Initiatives</Link></li>
               <li className="menu-item"><a href="#gallery">Gallery</a></li>
             </ul>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
