@@ -11,9 +11,9 @@ import {
 import placeholderLogo from '../assets/placeholder-logo.png';
 import heroImage from '../assets/hero-image.jpg';
 import aboutImage from '../assets/about-image.jpg';
-import hackathonImage from '../assets/hackathon-image.jpg';
-import aiWorkshopImage from '../assets/ai-workshop.jpg';
-import techTalkImage from '../assets/tech-talk.jpg';
+import hackathonImage from '../assets/scotlandyard.webp';
+import aiWorkshopImage from '../assets/squareone.png';
+import techTalkImage from '../assets/transcend.webp';
 import teamMember1 from '../assets/team-member-1.jpg';
 import teamMember2 from '../assets/team-member-2.jpg';
 import teamMember3 from '../assets/team-member-3.jpg';
@@ -64,51 +64,51 @@ const Homepage = () => {
   const sigs = [
     {
       name: 'Charge',
-      logo: 'src/assets/Charge.jpg',
+      logo: 'src/assets/charge.png',
       description:
-        'Electronics & Robotics SIG focused on embedded systems, IoT, and innovation in hardware.',
+'Charge, one of the biggest SIGs on campus, is a haven for budding electronics and electrical engineers. We at Charge cater to the needs of all individuals and nurture them through projects, KEPs and numerous events. We emphasize innovation and strive for excellence. If you are interested in all things electronic, then this is the place to be.',
     },
     {
       name: 'Create',
-      logo: 'src/assets/Create.jpg',
+      logo: 'src/assets/create.png',
       description:
-        'Design & UI/UX SIG empowering visual storytelling, branding, and user experience.',
+        'This is Create. We Create. Create what though? Media. Be it projects, events, KEPs on things like photography, videography, animation, or music production, we do it all. If you have a passion for anything creative, we\'re the place to be.',
     },
     {
       name: 'Clutch',
-      logo: 'src/assets/Clutch.jpg',
+      logo: 'src/assets/clutch.png',
       description:
-        'Coding SIG sharpening programming, problem-solving, and competitive coding skills.',
+        'Clutch as a SIG is a very interesting one. We do not do all the fun projects alone! We have members with varying fields of interest but still able to implement it in a mechanical project. We have projects in collaboration with Charge and Crypt along with complete mechanical projects also. That sure makes things interesting, doesn\'t it?!',
     },
     {
       name: 'Crypt',
-      logo: 'src/assets/Crypt.jpg',
+      logo: 'src/assets/concrete.png',
       description:
-        'Cybersecurity SIG exploring ethical hacking, cryptography, and digital safety.',
+'To deCrypt our comp SIG is not an unchallenging task! Crypt is home to all things Computer Science. We are a team of passionate programmers enthusiastic about our interests and eager to broaden our spheres. We constantly strive towards learning new skills and updating our knowledge through various KEPs, projects, and exciting events.',
     },
     {
       name: 'Concrete',
-      logo: 'src/assets/Concrete.jpg',
+      logo: 'src/assets/concrete.png',
       description:
-        'Core Engineering SIG promoting practical projects and strong technical foundations.',
+        'We’re one of the few SIGs rocking the world of Civil Engineering! From cracking codes to pouring concrete (figuratively, of course), we host fun KEPs, hands-on workshops, and events that build your inner civil engineer. Love bridges, buildings, or just breaking stuff down? Concrete’s where it’s at!',
     },
     {
       name: 'Catalyst',
-      logo: 'src/assets/Catalyst.jpg',
+      logo: 'src/assets/catalystfinal (1).png',
       description:
-        'AI/ML SIG diving into intelligent systems, data science, and machine learning.',
+        'Catalyst is a special interest group of ISTE-NITK dedicated to engineering applications in the field of Chemical Engineering. Through multiple events, KEPs, and Projects, Catalyst aims to bring out the technical aspect of chemical engineering in everyone. Catalyst provides a platform to always learn more!',
     },
     {
       name: 'Chronicle',
-      logo: 'src/assets/Chronicle.jpg',
+      logo: 'src/assets/chronicle.png',
       description:
-        'Content & Media SIG creating compelling articles, blogs, and digital content.',
+        'The Chronicles of ISTE are regaled across the campus, and generally, they revolve around the quirky members of the Chronicle SIG. We are a fraternity that fosters creativity, differing opinions, and being yourself. We bond over a wish to add an aesthetic twist to an otherwise purely technical coterie. To be a part of Chronicle, all you need is a splash of creativity and quirkiness.',
     },
     {
       name: 'Credit',
-      logo: 'src/assets/Credit.jpg',
+      logo: 'src/assets/credit (1).png',
       description:
-        'Finance & Management SIG building strategy, budgeting, and leadership skills.',
+        'If business buzzwords excite you more than buzzers, Credit is your crew! From finance and marketing to product management and analytics, we blend brains and business through KEPs, projects, and growth-driven sessions. Learn, lead, and level up with us!',
     },
   ];
 
@@ -468,42 +468,42 @@ const Homepage = () => {
           <div className="event-cards">
             <div className="event-card">
               <div className="event-image">
-                <img src={hackathonImage} alt="Hackathon Event" />
+                <img src={hackathonImage} alt="Scotland Yard" />
               </div>
               <div className="event-content">
                 <div className="event-date">
-                  <FontAwesomeIcon icon={faCalendar} /> May 25, 2025
+                  <FontAwesomeIcon icon={faCalendar} /> October 2, 2024
                 </div>
                 <h3 className="event-title">Scotland Yard</h3>
-                <p className="event-desc">A 24-hour coding marathon where participants collaborate to build innovative solutions to real-world problems.</p>
-                <a href="#" className="btn btn-outline">Learn More</a>
-              </div>
-            </div>
-            
-            <div className="event-card">
-              <div className="event-image">
-                <img src={aiWorkshopImage} alt="Workshop Event" />
-              </div>
-              <div className="event-content">
-                <div className="event-date">
-                  <FontAwesomeIcon icon={faCalendar} /> June 10, 2025
-                </div>
-                <h3 className="event-title">Transcend</h3>
-                <p className="event-desc">Learn the fundamentals of artificial intelligence and machine learning from industry experts.</p>
+                <p className="event-desc">A thrilling campus-wide mystery-solving game where participants decode clues, explore hidden corners of NITK, and compete to be the ultimate detective. It blends storytelling, puzzles, and teamwork—making it one of ISTE’s most iconic and immersive experiences.</p>
                 <a href="#" className="btn btn-outline">Register Now</a>
               </div>
             </div>
             
             <div className="event-card">
               <div className="event-image">
-                <img src={techTalkImage} alt="Tech Talk Event" />
+                <img src={aiWorkshopImage} alt="Square One" />
               </div>
               <div className="event-content">
                 <div className="event-date">
-                  <FontAwesomeIcon icon={faCalendar} /> June 18, 2025
+                  <FontAwesomeIcon icon={faCalendar} /> November 10, 2024
                 </div>
                 <h3 className="event-title">Square One</h3>
-                <p className="event-desc">An engaging session featuring industry leaders sharing insights about emerging technologies.</p>
+                <p className="event-desc">Square One is ISTE NITK’s flagship onboarding event for first-year students, designed to introduce them to the club’s vibrant technical and creative culture.</p>
+                <a href="#" className="btn btn-outline">Register Now</a>
+              </div>
+            </div>
+            
+            <div className="event-card">
+              <div className="event-image">
+                <img src={techTalkImage} alt="Transcend" />
+              </div>
+              <div className="event-content">
+                <div className="event-date">
+                  <FontAwesomeIcon icon={faCalendar} /> January 24, 2025
+                </div>
+                <h3 className="event-title">Transend</h3>
+                <p className="event-desc">Transcend is ISTE NITK’s flagship multi-domain event where participants tackle real-world inspired challenges across diverse technical fields. It encourages cross-SIG collaboration, creativity, and strategic thinking—making it a platform for showcasing technical excellence and teamwork.</p>
                 <a href="#" className="btn btn-outline">Save Your Seat</a>
               </div>
             </div>
