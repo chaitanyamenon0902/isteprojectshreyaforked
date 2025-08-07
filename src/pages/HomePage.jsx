@@ -11,7 +11,7 @@ import {
 import placeholderLogo from '../assets/placeholder-logo.png';
 import heroImage from '../assets/hero-image.jpg';
 import aboutImage from '../assets/about-image.jpg';
-import hackathonImage from '../assets/scotlandyard.webp';
+import hackathonImage from '../assets/ScotlandYard.jpg';
 import aiWorkshopImage from '../assets/squareone.png';
 import techTalkImage from '../assets/transcend.webp';
 import teamMember1 from '../assets/team-member-1.jpg';
@@ -35,6 +35,7 @@ const TeamMember = ({ image, name, role, altText }) => (
     </div>
   </div>
 );
+
 
 const Homepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -365,7 +366,7 @@ const Homepage = () => {
   <a href="https://istenitk.wordpress.com/" target="_blank" rel="noopener noreferrer">Blogs</a>
 </li>
               <li className="menu-item"><Link to ="/socialinitiatives">Social Initiatives</Link></li>
-              <li className="menu-item"><a href="#gallery">Gallery</a></li>
+              <li className="menu-item"><Link to="/gallery">Gallery</Link></li>
             </ul>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
               <FontAwesomeIcon icon={faBars} />
