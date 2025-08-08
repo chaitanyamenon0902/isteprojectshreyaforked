@@ -29,100 +29,91 @@ const ProjectDetailsPage = () => {
   }
 
   return (
-    <>
+  <>
     <Header />
     <div className="project-page">
       <div className="project-card">
-        <div className="card-content">
+
+        {/* TOP SECTION */}
+        <div className="project-top">
           {/* LEFT SIDE */}
-          <div className="card-left">
-            <div className="image-wrapper">
-              <img
-                src={project.image_url || defaultImage}
-                alt={project.name}
-              />
-            </div>
-
-            <div className="project-description">
-              <h3>What was tackled?</h3>
-              <p>{project.tackled}</p>
-
-              <h3>How was it done?</h3>
-              <p>{project.approach}</p>
-            </div>
+          <div className="project-top-left">
+            <img
+              src={project.image_url || defaultImage}
+              alt={project.name}
+            />
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="card-right">
+          <div className="project-top-right">
             <div className="project-header">
               <h2 className="project-title">{project.name}</h2>
               <p className="project-meta">{project.sig} • {project.year}</p>
 
               {/* Keywords */}
-              <div class="tech-tags">
+              <div className="TECH-tags">
                 {(project.keywords || []).map((kw, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-800 border border-blue-300"
-                  >
-                    {kw}
-                  </span>
+                  <span key={i}>{kw}</span>
                 ))}
               </div>
             </div>
 
             {/* Links */}
-            {(project.github_link || project.simulation_link) && (
-              <div className="project-links">
-                {project.github_link && (
-                  <a
-                    href={project.github_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link-button"
-                  >
-                    🔗 GitHub
-                  </a>
-                )}
-                {project.simulation_link && (
-                  <a
-                    href={project.simulation_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link-button"
-                  >
-                    🛰 Simulation
-                  </a>
-                )}
-              </div>
-            )}
+<div className="project-links">
+  <a
+    href={project.github_link || "#"}
+    target={project.github_link ? "_blank" : "_self"}
+    rel="noopener noreferrer"
+    className={`project-link-button ${!project.github_link ? "disabled" : ""}`}
+    onClick={e => {
+      if (!project.github_link) e.preventDefault();
+    }}
+  >
+    🔗 Report
+  </a>
 
-            <div className="contributors">
-              <div>
-                <h4>Mentors</h4>
-                <ul>
-                  {(project.mentors || []).map((m, i) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-              <div>
-                <h4>Mentees</h4>
-                <ul>
-                  {(project.mentees || []).map((m, i) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-            </div>
+  <a
+    href={project.simulation_link || "#"}
+    target={project.simulation_link ? "_blank" : "_self"}
+    rel="noopener noreferrer"
+    className={`project-link-button ${!project.simulation_link ? "disabled" : ""}`}
+    onClick={e => {
+      if (!project.simulation_link) e.preventDefault();
+    }}
+  >
+    🛰 Simulation
+  </a>
+</div>
 
-            <div className="contact">
-              <h4>Contact</h4>
-              <p>{[...(project.mentors || []), ...(project.mentees || [])].join(', ')}</p>
-            </div>
+
+            {/* Contributors */}
+            <div className="contributors contact">
+  <p>
+    <strong>MENTORS:</strong> {(project.mentors || []).join(", ")}
+  </p>
+  <p>
+    <strong>MENTEES:</strong> {(project.mentees || []).join(", ")}
+  </p>
+</div>
+
           </div>
         </div>
+
+        {/* BOTTOM SECTION */}
+        <div className="project-bottom">
+          <h3>WHAT WAS TACKLED?</h3>
+          <p className="project-tackled">{project.tackled}</p>
+
+          <h3>HOW WAS IT DONE?</h3>
+          <p className="project-approach">{project.approach}</p>
+        </div>
+
       </div>
     </div>
     <Footer />
-    </>
-  );
+  </>
+);
+
 };
 
 export default ProjectDetailsPage;
