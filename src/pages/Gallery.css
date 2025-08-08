@@ -1,5 +1,7 @@
 /* Apply custom font and base styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -35,12 +37,12 @@ body {
 }
 
 .Event-title {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  font:"Dancing Script";
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 600;
-  color: #444;
+  color: #010102ff;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }

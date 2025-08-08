@@ -90,6 +90,33 @@ const MeetTheTeam = () => {
         twitter: 'https://twitter.com/emmarodriguez'
       }
     },
+
+    {
+      id: 7,
+      name: 'Ojusvi Gudi',
+      role: 'Chairperson',
+      category: 'Admin Core',
+      image: 'src/assets/730_Ojusvi.jpg',
+      bio: 'I’m a Mechanical Engineering student passionate about music, dance, and all things aerospace. A vocalist, dancer, and coffee enthusiast, I’m equally at home on stage or strolling along the beach. My technical interests include Aerospace, CFD, and Aeroacoustics, explored through internships at the University of Nebraska–Lincoln and Iowa State University.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/hari-sharan-9584b1226/',
+        github: 'https://github.com/alexjohnson',
+        twitter: 'https://twitter.com/alexjohnson'
+      }
+    },
+    {
+      id: 8,
+      name: 'Ananya Mondal',
+      role: 'Chief Coordinator',
+      category: 'Admin Core',
+      image: 'src/assets/728_AnanyaMondal.jpeg',
+      bio: 'I’m Ananya, a Chemical Engineering student from Kolkata with a sweet tooth and an undefeated Spotify personality. Passionate about hip hop, languages, and animation, I’m interested in marketing, consulting, business analysis, and market research, with experience at National Research Group and MRPL.',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/hari-sharan-9584b1226/',
+        github: 'https://github.com/alexjohnson',
+        twitter: 'https://twitter.com/alexjohnson'
+      }
+    },
   ];
 
   // List of all categories

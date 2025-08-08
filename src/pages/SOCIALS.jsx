@@ -2,8 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
 import Header from '../components/Header';
 import sheLogo from '../assets/Social Initiatives Logo - Sanjay Hazra ..png';
-import './She.css';
-
+import 'typeface-dancing-script';
 
 
 const SOCIALS = () => {
@@ -32,6 +31,7 @@ const SOCIALS = () => {
       alignItems: 'center',
       padding: '0 20px'
     },
+    
     logo: {
       display: 'flex',
       alignItems: 'center',
@@ -99,7 +99,7 @@ const SOCIALS = () => {
     },
     section: {
       background: 'white',
-      border: '3px solid #e91c91',
+      border: '3px solid #1a237e',
       borderRadius: '0',
       'margin-bottom': '40px',
       overflow: 'hidden',
@@ -108,20 +108,12 @@ const SOCIALS = () => {
       gridTemplateColumns: '300px 1fr',
       minHeight: '150px'
     },
-    sectionHeader: {
-  fontFamily: `'PannaCotta', cursive`,
-  color: 'rgb(234, 27, 145)', // Same as #ea1b91
-  fontSize: '48px',
-  textTransform: 'capitalize',
-  textAlign: 'center',
-  lineHeight: '110%',
-  fontWeight: '400',
-  margin: '2.3rem 0 1.4rem'
-},
     sectionContent: {
     fontFamily: '"Montserrat", sans-serif',
   fontSize: '16px',
   textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
   color: 'rgba(0, 0, 0, 0.87)',
   fontWeight: 400,
   marginLeft: '0px',
@@ -135,6 +127,16 @@ const SOCIALS = () => {
       padding: 0,
       margin: 0
     },
+    SectionHeader: {
+  fontFamily: "'Dancing Script', cursive",
+  color: '#1a237e', 
+  fontSize: '4rem',
+  textTransform: 'capitalize',
+  textAlign: 'center',
+  lineHeight: '110%',
+  fontWeight: '400',
+  margin: '2.3rem 0 1.4rem'
+},
     missionPoint: {
       fontFamily: '"Montserrat", sans-serif',
       marginBottom: '15px',
@@ -143,13 +145,13 @@ const SOCIALS = () => {
       gap: '10px'
     },
     heart: {
-      color: '#ea1c91',
-      fontSize: '16px',
+      color: '#1a237e',
+      fontSize: '30px',
       marginTop: '3px',
       flexShrink: 0
     },
     showMore: {
-      color: '#e91e63',
+      color: '#1a237e',
       textDecoration: 'none',
       fontWeight: 'bold',
       fontSize: '16px'
@@ -162,7 +164,7 @@ const SOCIALS = () => {
       padding: '20px 0'
     },
     coreValuesHighlight: {
-      color: '#ea1c91',
+      color: '#1a237e',
       fontWeight: 'bold'
     },
     teamSection: {
@@ -171,7 +173,7 @@ const SOCIALS = () => {
     },
     teamTitle: {
       fontSize: '64px',
-      color: '#e91e63',
+      color: '#1a237e',
       fontWeight: 'normal',
       marginBottom: '50px',
       fontFamily: 'serif'
@@ -199,7 +201,7 @@ const SOCIALS = () => {
       objectFit: 'cover'
     },
     footer: {
-  background: '#e91c91',
+  background: '#1a237e',
   paddingTop: '40px',
   color: 'white',
   fontFamily: 'Arial, sans-serif'
@@ -258,7 +260,7 @@ quickAccessLink: {
   transition: 'opacity 0.3s'
 },
 footerBottom: {
-  background: '#dc1d8a',
+  background: '#1a237e',
   textAlign: 'center',
   padding: '15px 0',
   fontSize: '14px'
@@ -281,43 +283,51 @@ footerBottom: {
         {/* Sections */}
         <div style={styles.sectionsContainer}>
           <div style={styles.section}>
-            <div style={styles.sectionHeader}>Our Mission</div>
+            <div style={styles.SectionHeader}>Our Mission</div>
             <div style={styles.sectionContent}>
               <ul style={styles.missionPoints}>
                 <li style={styles.missionPoint}>
                   <span style={styles.heart}>•</span>
-                  <span>Conducting various events in college for social awareness and to make sure maximum people participate in it.</span>
+                  <div style={styles.sectionContent}>Conducting various events in college for social awareness and to make sure maximum people participate in it.
+                  </div>
                 </li>
                 <li style={styles.missionPoint}>
                   <span style={styles.heart}>•</span>
-                  <span>Engaging the students of NITK to cultivate an attitude of acceptance towards pre-existing societal differences and diversities.</span>
+                  <div style={styles.sectionContent}>
+                  Engaging the students of NITK to cultivate an attitude of acceptance towards pre-existing societal differences and diversities.
+                  </div>
                 </li>
                 <li style={styles.missionPoint}>
                   <span style={styles.heart}>•</span>
-                  <span>Creating stronger bonds between the students by helping them indulge in various activities helping them understand the importance of coexistence.</span>
+                  <div style={styles.sectionContent}>
+                    Creating stronger bonds between the students by helping them indulge in various activities helping them understand the importance of coexistence.
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
 
           <div style={styles.section}>
-            <div style={styles.sectionHeader}>Our Vision</div>
+            <div style={styles.SectionHeader}>Our Vision</div>
             <div style={styles.sectionContent}>
               To create a united community of people, considerate and respectful towards themselves, each-other and the world and to take actions that initiate lasting changes for the future. To provide a safe and non-judgemental space to every member to express and accept themselves.
             </div>
           </div>
 
           <div style={styles.section}>
-            <div style={styles.sectionHeader}>Description</div>
+            <div style={styles.SectionHeader}>Description</div>
             <div style={styles.sectionContent}>
               <ul style={styles.missionPoints}>
                 <li style={styles.missionPoint}>
                   <span style={styles.heart}>•</span>
-                  <span>Since 2017, at Social Initiatives ISTE NITK, our motive has been to nurture a socially inclusive environment in which students of NITK develop a healthy open-minded attitude and awareness towards various social issues, like inequality, indiscrimination, mental health issues etc., and thereby inculcate a cooperative and caring nature towards everyone else.</span>
+                  <div style={styles.sectionContent}>Since 2017, at Social Initiatives ISTE NITK, our motive has been to nurture a socially inclusive environment in which students of NITK develop a healthy open-minded attitude and awareness towards various social issues, like inequality, indiscrimination, mental health issues etc., and thereby inculcate a cooperative and caring nature towards everyone else.
+                  </div>
                 </li>
                 <li style={styles.missionPoint}>
                   <span style={styles.heart}>•</span>
-                  <span>To bring about these, we regularly organize events and workshops related to social awareness in NITK and have received a positive response from the students. Some of the activities are open mic events, group discussions on social topics and interviews with people to share their views and opinions on a particular topic. We aim to continue organizing such events and make a positive contribution to society.</span>
+                  <div style={styles.sectionContent}>
+                  To bring about these, we regularly organize events and workshops related to social awareness in NITK and have received a positive response from the students. Some of the activities are open mic events, group discussions on social topics and interviews with people to share their views and opinions on a particular topic. We aim to continue organizing such events and make a positive contribution to society.
+                  </div>
                 </li>
               </ul>
             </div>
@@ -325,47 +335,84 @@ footerBottom: {
         </div>
 
         <div style={styles.section}>
-            <div style={styles.sectionHeader}>Why She ?</div>
+            <div style={styles.SectionHeader}>Community Outreach & Social Responsibility</div>
             <div style={styles.sectionContent}>
-                Let's look very briefly at the statistics on women in the technology oriented industries. This industry has long been a male dominated world, but as we enter a new decade it is time to revisit the position of women in technology.
-Results from global reports on the state of play for women in technology show that,
               <ul style={styles.missionPoints}>
                 <li style={styles.missionPoint}>
-                  <span style={styles.heart}>♡</span>
-                  <span>Women make up an estimated 26% of workers in Data and Artificial Intelligence roles, 15% of workers in Engineering roles and 12% of workers in Cloud Computing roles.</span>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Visit to KREC English Medium School to conduct a career workshop and teach basic science through interactive games.</div>
                 </li>
                 <li style={styles.missionPoint}>
-                  <span style={styles.heart}>♡</span>
-                  <span>Only 34% of STEM graduates are women.</span>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Collection drive for St. Joseph’s Prashanth Nivas, gathering clothes, books, and stationery for the elderly, differently abled, and school-going children.</div>
                 </li>
                 <li style={styles.missionPoint}>
-                  <span style={styles.heart}>♡</span>
-                  <span>93% of capital invested in tech companies went to all male founding teams..</span>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Donation visit to St. Joseph’s Prashanth Nivas on 3rd November 2019, engaging with residents in a heartwarming experience.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Zero Waste Kit initiative to reduce plastic pollution and encourage sustainable living.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Awareness campaign on sexual abuse recovery, sharing a member’s personal healing journey.</div>
                 </li>
               </ul>
-              Our motto 'Empowering Women, Engineering the Future' is aptly put forward for women to seek inspiration and prepare you specifically for professional practice and future leadership roles.
             </div>
           </div>
 
           <div style={styles.section}>
-            <div style={styles.sectionHeader}>Our Events</div>
+            <div style={styles.SectionHeader}>Awareness & Inclusivity Initiatives</div>
             <div style={styles.sectionContent}>
-              SHE aims to host a variety of events and activities throughout the year, including guest lectures from successful female engineers, workshops on resume building and interview skills, events focused on topics such as coding, data science and networking opportunities with alumni that support the advancement of women in engineering.
+              <ul style={styles.missionPoints}>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Internal LGBTQ+ attitudes survey and ongoing efforts to create a safe, inclusive space.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Event "About Bloody Time" with Dr. Trupta Naik to address menstrual health and break taboos.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Collaboration with Rotaract Club for "It’s Okay Not to Be Okay" open mic on mental health awareness, inviting anonymous creative submissions.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Pride Month celebrations with safe spaces, discussions, and the blog piece "1965" highlighting historical LGBTQ+ struggles.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>"Guess Who?" event to spotlight LGBTQ+ icons, alongside the blog "Pages From a Father’s Diary" about acceptance.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>"To Be Honest" discussion platform for open sharing of views on social and student issues.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Launch of the revamped Social Initiatives logo inspired by Helen Keller’s quote on unity.</div>
+                </li>
+                <li style={styles.missionPoint}>
+                  <span style={styles.heart}>•</span>
+                  <div style={styles.sectionContent}>Second "It’s Okay Not to Be Okay" event featuring the interactive game Put a Finger Down to highlight mental health challenges.</div>
+                </li>
+              </ul>
             </div>
           </div>
 
+          
+
         {/* Core Values */}
-        <section className="she-core-values">
-  SHE’s core values are <span>Inclusion, Integrity, Teamwork, Respect, and Dedication.</span>
-</section>
 
         {/* Team Section */}
         <div style={styles.teamSection}>
-          <h2 style={styles.teamTitle}>The Team</h2>
+          <h2 style={styles.teamTitle}>Throughout The Years</h2>
           <div style={styles.teamGrid}>
             <div style={styles.teamMember}>
               <img 
-                src="https://images.unsplash.com/photo-1494790108755-2616b332c133?w=300&h=300&fit=crop&crop=face" 
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" 
                 alt="Team Member 1"
                 style={styles.teamMemberImg}
               />
@@ -401,16 +448,16 @@ Results from global reports on the state of play for women in technology show th
     <div style={styles.footerBlock}>
       <h3 style={styles.footerTitle}>Reach us at:</h3>
       <div style={styles.socialLinks}>
-        <a href="https://facebook.com" style={styles.socialLink} aria-label="Facebook">
+        <a href="https://www.facebook.com/istenitk/" style={styles.socialLink} aria-label="">
           <FaFacebookF />
         </a>
-        <a href="https://instagram.com" style={styles.socialLink} aria-label="Instagram">
+        <a href="https://www.instagram.com/istenitk/" style={styles.socialLink} aria-label="Instagram">
           <FaInstagram />
         </a>
-        <a href="https://youtube.com" style={styles.socialLink} aria-label="YouTube">
+        <a href="https://www.youtube.com/c/istenitk" style={styles.socialLink} aria-label="YouTube">
           <FaYoutube />
         </a>
-        <a href="https://linkedin.com" style={styles.socialLink} aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/istenitk/?originalSubdomain=in" style={styles.socialLink} aria-label="LinkedIn">
           <FaLinkedinIn />
         </a>
       </div>

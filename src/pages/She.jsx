@@ -2,8 +2,6 @@ import React from 'react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
 import Header from '../components/Header';
 import sheLogo from '../assets/she_logo.5f1c62ff.jpeg';
-import './She.css';
-
 
 
 const SHE = () => {
