@@ -14,10 +14,13 @@ import aboutImage from '../assets/about-image.jpg';
 import hackathonImage from '../assets/ScotlandYard.jpg';
 import aiWorkshopImage from '../assets/squareone.png';
 import techTalkImage from '../assets/transcend.webp';
-import teamMember1 from '../assets/team-member-1.jpg';
-import teamMember2 from '../assets/team-member-2.jpg';
-import teamMember3 from '../assets/team-member-3.jpg';
-import teamMember4 from '../assets/team-member-4.jpg';
+import Likith from '../assets/750_LikithM.jpg';
+import Linisha from '../assets/Linisha.jpeg';
+import Ansh from '../assets/AnshVivekMalhotra.jpg';
+import Anjana from '../assets/Anjana.jpg';
+import Amaan from '../assets/Amaan.jpg';
+import Naisha from '../assets/Naisha.jpg';
+import Shenoy from '../assets/Shenoy.jpg';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
 import Dean from '../assets/dean sw.jpg';
@@ -135,13 +138,13 @@ const coreTeamMembers = [
   { id:1, image: Dean, name: "Mandela Govind Raj", role: "Dean SW" },
   { id: 2, image: SB, name: "Shashi Bhushan Arya", role: "Professor In Charge of Technical Clubs" },
   { id: 3, image: FA, name: "Vaishakh Nair", role: "Faculty Advisor" },
-  { id: 4, image: teamMember2, name: "Linisha R", role: "Joint Convenor" },
-  { id: 5, image: teamMember3, name: "Ansh Malhotra", role: "Secretary" },
-  { id: 6, image: teamMember4, name: "Anjana T K", role: "Chief Coordinator" },
-  { id: 7, image: teamMember1, name: "Amaan Farhan", role: "Coordinator-Club Events" },
-  { id: 8, image: teamMember2, name: "Naisha Kishore", role: "Coordinator-Technical Affairs" },
-  { id: 9, image: teamMember3, name: "Jeevotthama Shenoy", role: "Coordinator-Club Affairs" },
-];
+  { id: 4, image: Likith, name: "Likith M", role: "Convener" },
+  {id: 5, image: Linisha, name: "Linisha Ramesh", role: "Joint Convener" },
+  { id: 6, image: Ansh, name: "Ansh Malhotra", role: "Secretary" },
+  { id: 7, image: Anjana, name: "Anjana T K", role: "Chief Coordinator" },
+  { id: 8, image: Amaan, name: "Amaan Farhan", role: "Coordinator-Club Events" },
+  { id: 9, image: Naisha, name: "Naisha Kishore", role: "Coordinator-Technical Affairs" },
+  { id: 10, image: Shenoy, name: "Jeevotthama Shenoy", role: "Coordinator-Club Affairs" },];
 
   const auxCoreMembers= [
   ]
