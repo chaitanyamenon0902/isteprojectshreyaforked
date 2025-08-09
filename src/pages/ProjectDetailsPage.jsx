@@ -59,31 +59,26 @@ const ProjectDetailsPage = () => {
             </div>
 
             {/* Links */}
-<div className="project-links">
+            <div className="project-links">
   <a
-    href={project.github_link || "#"}
-    target={project.github_link ? "_blank" : "_self"}
+    href={project.github_link || "/coming-soon"}
+    target="_blank"
     rel="noopener noreferrer"
-    className={`project-link-button ${!project.github_link ? "disabled" : ""}`}
-    onClick={e => {
-      if (!project.github_link) e.preventDefault();
-    }}
+    className="project-link-button"
   >
     🔗 Report
   </a>
 
   <a
-    href={project.simulation_link || "#"}
-    target={project.simulation_link ? "_blank" : "_self"}
+    href={project.simulation_link || "/coming-soon"}
+    target="_blank"
     rel="noopener noreferrer"
-    className={`project-link-button ${!project.simulation_link ? "disabled" : ""}`}
-    onClick={e => {
-      if (!project.simulation_link) e.preventDefault();
-    }}
+    className="project-link-button"
   >
     🛰 Simulation
   </a>
 </div>
+
 
 
             {/* Contributors */}

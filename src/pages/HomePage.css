@@ -1133,3 +1133,182 @@ a:focus,
   outline-offset: 4px;
   border-radius: 5px;
 }
+
+
+/* Faculty */
+/* Faculty Section Styling */
+.faculty-section {
+  margin-bottom: 5rem;
+}
+
+.faculty-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  position: relative;
+}
+
+.faculty-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.faculty-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 60px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faculty-member-circle {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.faculty-member-circle:hover {
+  transform: translateY(-12px);
+}
+
+.faculty-image-circle {
+  position: relative;
+  width: 180px;
+  height: 1800px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.faculty-image-circle:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: #007bff;
+}
+
+.faculty-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.faculty-image-circle:hover img {
+  transform: scale(1.1);
+}
+
+.faculty-member-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.85), rgba(108, 117, 125, 0.85));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.faculty-image-circle:hover .faculty-member-overlay {
+  opacity: 1;
+}
+
+.faculty-info-hover {
+  text-align: center;
+  color: white;
+  padding: 25px;
+}
+
+.faculty-name-hover {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.faculty-role-hover {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments for Faculty Section */
+
+/* Base size for faculty circles (add this if not already set) */
+.faculty-image-circle {
+  width: 180px;
+  height: 180px;
+}
+
+/* Larger circles for wider screens */
+@media (max-width: 1200px) {
+  .faculty-image-circle {
+    width: 180px;  /* increased from 160 */
+    height: 180px;
+  }
+
+  .faculty-name-hover {
+    font-size: 1rem;  /* slightly bigger */
+  }
+
+  .faculty-role-hover {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faculty-image-circle {
+    width: 160px;  /* increased from 140 */
+    height: 160px;
+  }
+
+  .faculty-name-hover {
+    font-size: 1.1rem;
+  }
+
+  .faculty-role-hover {
+    font-size: 1rem;
+  }
+
+  .faculty-section-title {
+    font-size: 1.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .faculty-section {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-circles {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .faculty-image-circle {
+    width: 180px;  /* increased from 160 */
+    height: 180px;
+  }
+}
