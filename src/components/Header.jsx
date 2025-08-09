@@ -51,9 +51,10 @@ function Header() {
                 <li><Link to="/sigs/concrete">Concrete</Link></li>
               </ul>
             </li>
-
-            <li className="menu-item"><Link to="/meettheteam">Our Team</Link></li>
+            
             <li className="menu-item"><Link to="/#events">Events</Link></li>
+            <li className="menu-item"><Link to="/meettheteam">Our Team</Link></li>
+            
             <li className="menu-item"><Link to="/projects">Projects</Link></li>
             <li className="menu-item"><Link to="/she">SHE</Link></li>
             <li className="menu-item">

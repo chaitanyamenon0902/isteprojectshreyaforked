@@ -1,0 +1,134 @@
+/* Apply custom font and base styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.gallery-container {
+  padding: 6rem 2rem 4rem; /* top padding to avoid header overlap */
+  background-color: #fdfdfd;
+  min-height: 100vh;
+}
+
+.Gallery-heading {
+  text-align: center;
+  font:"Libertinus Sans";
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: #1a237e;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+.gallery-section {
+  margin-bottom: 5rem;
+}
+
+.Event-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 600;
+  color: #010102ff;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.carousel-row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 35s linear infinite;
+  align-items: center;
+}
+
+.scroll-right .carousel-track {
+  animation: scroll-right 35s linear infinite;
+}
+
+.carousel-image {
+  height: 280px;
+  width: auto;
+  margin-right: 1.5rem;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .carousel-image {
+    height: 220px;
+  }
+
+  .gallery-heading {
+    font-size: 2.8rem;
+  }
+
+  .event-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding-top: 5rem;
+  }
+
+  .carousel-image {
+    height: 180px;
+    margin-right: 1rem;
+  }
+
+  .gallery-heading {
+    font-size: 2.2rem;
+  }
+
+  .event-title {
+    font-size: 1.5rem;
+  }
+}

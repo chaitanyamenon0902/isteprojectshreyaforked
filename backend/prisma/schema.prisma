@@ -8,17 +8,17 @@ datasource db {
 }
 
 model Project {
-  id              Int      @id @default(autoincrement())
+  id              Int      @id(map: "projects_pkey") @default(autoincrement())
   name            String
-  description     String
+  description     String?
   image_url       String?
-  sig             String
-  year            Int
+  sig             String?
+  year            Int?
   keywords        String[]
   github_link     String?
   simulation_link String?
-  tackled         String
-  approach        String
+  tackled         String?
+  approach        String[]
   mentors         String[]
   mentees         String[]
 }

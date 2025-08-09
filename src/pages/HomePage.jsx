@@ -11,7 +11,7 @@ import {
 import placeholderLogo from '../assets/placeholder-logo.png';
 import heroImage from '../assets/hero-image.jpg';
 import aboutImage from '../assets/about-image.jpg';
-import hackathonImage from '../assets/scotlandyard.webp';
+import hackathonImage from '../assets/ScotlandYard.jpg';
 import aiWorkshopImage from '../assets/squareone.png';
 import techTalkImage from '../assets/transcend.webp';
 import teamMember1 from '../assets/team-member-1.jpg';
@@ -20,6 +20,9 @@ import teamMember3 from '../assets/team-member-3.jpg';
 import teamMember4 from '../assets/team-member-4.jpg';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
+import Dean from '../assets/dean sw.jpg';
+import SB from '../assets/sb nitkcrop.jpeg';
+import FA from '../assets/fa nitk.webp';
 
 // TeamMember component
 const TeamMember = ({ image, name, role, altText }) => (
@@ -35,6 +38,22 @@ const TeamMember = ({ image, name, role, altText }) => (
     </div>
   </div>
 );
+
+const FacultyMember = ({ image, name, role, altText }) => (
+  <div className="faculty-member-circle">
+    <div className="faculty-image-circle">
+      <img src={image} alt={altText} />
+      <div className="faculty-member-overlay">
+        <div className="faculty-info-hover">
+          <h4 className="faculty-name-hover">{name}</h4>
+          <p className="faculty-role-hover">{role}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+
 
 const Homepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -112,220 +131,19 @@ const Homepage = () => {
     },
   ];
 
-  const coreTeamMembers = [
-    {
-      id: 1,
-      image: teamMember1,
-      name: "Likith M",
-      role: "Convenor"
-    },
-    {
-      id: 2,
-      image: teamMember2,
-      name: "Linisha R",
-      role: "Joint Convenor"
-    },
-    {
-      id: 3,
-      image: teamMember3,
-      name: "Ansh Malhotra",
-      role: "Secretary"
-    },
-    {
-      id: 4,
-      image: teamMember4,
-      name: "Anjana T K",
-      role: "Cheif Coordinator"
-    },
-    {
-      id: 5,
-      image: teamMember1,
-      name: "Amaan Farhan",
-      role: "Coordinator-Club Events"
-    },
-    {
-      id: 6,
-      image: teamMember2,
-      name: "Naisha Kishore",
-      role: "Coordinator-Technical Affairs"
-    },
-    {
-      id: 7,
-      image: teamMember3,
-      name: "Jeevotthama Shenoy",
-      role: "Coordinator-Club Affairs"
-    },
-    {
-      id: 8,
-      image: teamMember3,
-      name: "Thatavarthi Rupesh Kumar",
-      role: "SIG Head-Crypt"
-    },
-    {
-      id: 9,
-      image: teamMember3,
-      name: "P Devi Deepika",
-      role: "SIG Head-Crypt"
-    },
-    {
-      id: 10,
-      image: teamMember3,
-      name: "Suveena Sadashiv",
-      role: "SIG Head-Crypt"
-    },
-    {
-      id: 11,
-      image: teamMember3,
-      name: "Pallavi Parage",
-      role: "SIG Head-Charge"
-    },
-    {
-      id: 12,
-      image: teamMember3,
-      name: "Nikhitha Mathew",
-      role: "SIG Head-Charge"
-    },
-    {
-      id: 13,
-      image: teamMember3,
-      name: "Nisarg Rajdeep",
-      role: "SIG Head-Chronicle"
-    },
-    {
-      id: 14,
-      image: teamMember3,
-      name: "Sahil Hinwani",
-      role: "SIG Head-Chronicle"
-    },
-    {
-      id: 15,
-      image: teamMember3,
-      name: "Ajay T S",
-      role: "SIG Head-Clutch"
-    },
-    {
-      id: 16,
-      image: teamMember3,
-      name: "Yash Hurkat",
-      role: "SIG Head-Clutch"
-    },
-    {
-      id: 17,
-      image: teamMember3,
-      name: "Rashmi Murthy",
-      role: "SIG Head-Catalyst"
-    },
-    {
-      id: 18,
-      image: teamMember3,
-      name: "Divyanshu Ratnakar" ,
-      role: "SIG Head-Catalyst"
-    },
-    {
-      id: 19,
-      image: teamMember3,
-      name: "Shambhavi Jha",
-      role: "SIG Head-Concrete"
-    },
-    {
-      id: 20,
-      image: teamMember3,
-      name: "Tammisetti Sesha Satwika",
-      role: "SIG Head-Concrete"
-    },
-    {
-      id: 21,
-      image: teamMember3,
-      name: "Bhagwat Poorva Milind",
-      role: "SIG Head-Credit"
-    },
-    {
-      id: 22,
-      image: teamMember3,
-      name: "Priyanshu Kumar",
-      role: "SIG Head-Create"
-    }
-  ];
+const coreTeamMembers = [
+  { id:1, image: Dean, name: "Mandela Govind Raj", role: "Dean SW" },
+  { id: 2, image: SB, name: "Shashi Bhushan Arya", role: "Professor In Charge of Technical Clubs" },
+  { id: 3, image: FA, name: "Vaishakh Nair", role: "Faculty Advisor" },
+  { id: 4, image: teamMember2, name: "Linisha R", role: "Joint Convenor" },
+  { id: 5, image: teamMember3, name: "Ansh Malhotra", role: "Secretary" },
+  { id: 6, image: teamMember4, name: "Anjana T K", role: "Chief Coordinator" },
+  { id: 7, image: teamMember1, name: "Amaan Farhan", role: "Coordinator-Club Events" },
+  { id: 8, image: teamMember2, name: "Naisha Kishore", role: "Coordinator-Technical Affairs" },
+  { id: 9, image: teamMember3, name: "Jeevotthama Shenoy", role: "Coordinator-Club Affairs" },
+];
 
   const auxCoreMembers= [
-    {
-      id: 23,
-      image: teamMember3,
-      name: "Sanstuti Mishra",
-      role: "Secretary-Technical Affairs"
-    },
-    {
-      id: 24,
-      image: teamMember3,
-      name: "Amarnath Muralidhar",
-      role: "Secretary-Club Affairs"
-    },
-    {
-      id: 25,
-      image: teamMember3,
-      name: "Adhil Ali",
-      role: "Secretary-Event Affairs"
-    },
-    {
-      id: 26,
-      image: teamMember3,
-      name: "Jeeva K V",
-      role: "SHE Head"
-    },
-    {
-      id: 27,
-      image: teamMember3,
-      name: "Mohammed Gulzar Shaikh",
-      role: "Social Initiatives Head"
-    },
-    {
-      id: 28,
-      image: teamMember3,
-      name: "Kommidi Amulya",
-      role: "Publicity Coordinator"
-    },
-    {
-      id: 29,
-      image: teamMember3,
-      name: "Harsh Revar",
-      role: "Publicity Coordinator"
-    },
-    {
-      id: 30,
-      image: teamMember3,
-      name: "BK Hima Bindhu",
-      role: "Blog Coordinator"
-    },
-    {
-      id: 31,
-      image: teamMember3,
-      name: "Jonathan James",
-      role: "Treasurer"
-    },
-    {
-      id: 32,
-      image: teamMember3,
-      name: "Hriday",
-      role: "SIG Coordinator-Credit"
-    },
-    {
-      id: 33,
-      image: teamMember3,
-      name: "Mithul Sourav",
-      role: "SIG Coordinator-Credit"
-    },
-    {
-      id: 34,
-      image: teamMember3,
-      name: "N Kenisha Ishwar",
-      role: "SIG Coordinator-Create"
-    },
-    {
-      id: 35,
-      image: teamMember3,
-      name: "Tanush Abdulpur",
-      role: "SIG Coordinator-Create"
-    }
   ]
 
   return (
@@ -357,15 +175,16 @@ const Homepage = () => {
                   <li><a href="#concrete">Concrete</a></li>
                 </ul>
               </li>
-              <li className="menu-item"><Link to ="/meettheteam">Our Team</Link></li>
+              
               <li className="menu-item"><a href="#events">Events</a></li>
+              <li className="menu-item"><Link to ="/meettheteam">Our Team</Link></li>
               <li className="menu-item"><Link to="/projects">Projects</Link></li>
               <li className="menu-item"><Link to="/she">SHE</Link></li>
               <li className="menu-item">
   <a href="https://istenitk.wordpress.com/" target="_blank" rel="noopener noreferrer">Blogs</a>
 </li>
               <li className="menu-item"><Link to ="/socialinitiatives">Social Initiatives</Link></li>
-              <li className="menu-item"><a href="#gallery">Gallery</a></li>
+              <li className="menu-item"><Link to="/gallery">Gallery</Link></li>
             </ul>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
               <FontAwesomeIcon icon={faBars} />
@@ -516,57 +335,30 @@ const Homepage = () => {
 
       {/* Team Section */}
        {/* Updated Team Section */}
-      <section className="team" id="team">
+      
+      <section className="faculty-section" id="faculty">
         <div className="container">
-          <h2 className="section-title">Meet Our Team</h2>
-          <p className="section-subtitle">The dedicated individuals who make ISTE NITK a success.</p>
-
-          {/* Core Team Section */}
-          <div className="team-section">
-            <h3 className="team-section-title">THE CORE</h3>
-            <div className="team-circles">
-              {coreTeamMembers.map((member) => (
-                <TeamMember 
-                  key={member.id}
-                  image={member.image} 
-                  name={member.name} 
-                  role={member.role} 
-                  altText={`${member.name} - ${member.role}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Auxiliary Core Team Section */}
-          <div className="team-section">
-            <h3 className="team-section-title">AUXILIARY CORE</h3>
-            <div className="team-circles">
-              {auxCoreMembers.map((member) => (
-                <TeamMember 
-                  key={member.id}
-                  image={member.image} 
-                  name={member.name} 
-                  role={member.role} 
-                  altText={`${member.name} - ${member.role}`}
-                />
-              ))}
-            </div>
+          <h2 className="faculty-section-title">Faculty Members</h2>
+          <div className="faculty-circles">
+            {coreTeamMembers.slice(0, 3).map(({ id, image, name, role }) => (
+              <FacultyMember key={id} image={image} altText={name} name={name} role={role} />
+            ))}
           </div>
         </div>
       </section>
 
-
-      {/* Newsletter Section */}
-      <section className="newsletter">
+      <section className="team-section" id="team">
         <div className="container">
-          <h2 className="newsletter-title">Stay Updated</h2>
-          <p className="newsletter-desc">Subscribe to our newsletter to get the latest updates on events, workshops, and opportunities.</p>
-          <form className="newsletter-form">
-            <input type="email" className="newsletter-input" placeholder="Enter your email" required />
-            <button type="submit" className="btn">Subscribe</button>
-          </form>
+          <h2 className="team-section-title">Core Team</h2>
+          <div className="team-circles">
+            {coreTeamMembers.slice(3).map(({ id, image, name, role }) => (
+              <TeamMember key={id} image={image} altText={name} name={name} role={role} />
+            ))}
+          </div>
         </div>
       </section>
+
+      
 
       {/* Footer */}
       <footer id="contact">

@@ -94,43 +94,20 @@ function ProjectsPage() {
   <div className="project-card">
     <div className="project-img-container">
       <img
-        src={project.image_url || "/isteappdefualt.jpg"}
+        src={project.image_url || "../assets/isteappdefault.webp"}
         alt={project.name}
       />
       <div className="sig-badge">{project.sig || 'Other'}</div>
     </div>
     <div className="project-content">
-      <h2 className="project-title">{project.name}</h2>
-      <div className="project-year">📅 {project.year}</div>
-      <p className="project-description">{project.description}</p>
+      <h2 className="Project-title">{project.name}</h2>
+      <div className="Project-year">📅 {project.year}</div>
+      <p className="Project-description">{project.description}</p>
 
       <div className="tech-tags">
         {project.keywords.map((keyword, i) => (
           <span key={i}>{keyword}</span>
         ))}
-      </div>
-
-      <div className="project-buttons">
-        {project.github_link && (
-          <a
-            href={project.github_link}
-            target="_blank"
-            rel="noreferrer"
-            className="code-btn"
-          >
-            🧠 Code
-          </a>
-        )}
-        {project.simulation_link && (
-          <a
-            href={project.simulation_link}
-            target="_blank"
-            rel="noreferrer"
-            className="demo-btn"
-          >
-            🚀 Live Demo
-          </a>
-        )}
       </div>
     </div>
   </div>
